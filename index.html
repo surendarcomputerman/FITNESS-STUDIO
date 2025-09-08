@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Fitness Studio Dashboard</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+  <header>
+    <h1>Fitness Studio Dashboard</h1>
+    <nav>
+      <button onclick="showSection('schedule')">Trainer Schedule</button>
+      <button onclick="showSection('trainers')">Trainer Profiles</button>
+      <button onclick="showSection('membership')">Membership Calculator</button>
+      <button onclick="showSection('dashboard')">Dashboard</button>
+    </nav>
+  </header>
+  <main>
+
+   
+    <section id="schedule" class="active">
+      <h2>Trainer Schedule</h2>
+      <table id="classTable">
+        <thead>
+          <tr>
+           
+            <th>Trainer</th>
+            <th>Morning-Time</th>
+             <th>Evening-Time</th>
+            </tr>
+        </thead>
+
+        <tbody>
+         <tr>
+           <td>Karan</td>
+            <td>5:00am - 12:00pm</td>
+             <td>3:00pm - 9:00pm</td>
+           </tr>
+        </tbody>
+
+        <tbody>
+         <tr>
+            
+            <td>Lila</td>
+              <td>5:00am - 12:00pm</td>
+             <td>3:00pm - 9:00pm</td>
+           </tr>
+        </tbody>
+
+        <tbody>
+         <tr>
+          
+            <td>Tharun</td>
+            <td>5:00am - 12:00pm</td>
+             <td>3:00pm - 9:00pm</td>
+           </tr>
+        </tbody>
+
+      </table>
+    </section>
+
+  
+    <section id="trainers">
+      <h2>Trainer Profiles</h2>
+      <div id="trainerContainer">
+
+        <div class="trainer-card">
+          <img src="./assest/trainer.webp" alt="Trainer Karan">
+          <h3>Karan</h3>
+          <p>Expertise: Yoga, Weightlifting</p>
+          <p>Contact: fitgym456.com</p>
+        </div>
+
+        <div class="trainer-card">
+          <img src="./assest/woman-fitness-trainer-gym.jpg" alt="Trainer LILA">
+          <h3>Lila</h3>
+          <p>Expertise: Yoga,Fitness for Women</p>
+          <p>Contact: fitgym456.com</p>
+        </div>
+
+        <div class="trainer-card">
+          <img src="./assest/TRAINER3.webp" alt="Trainer Tharun">
+          <h3>Tharun</h3>
+          <p>Expertise: Yoga, Weightlifting, ABS</p>
+          <p>Contact: fitgym456.com</p>
+        </div>
+        
+      </div>
+    </section>
+
+    
+    <section id="membership">
+      <h2>Membership Calculator</h2>
+      <form id="membershipForm">
+        
+        <label for="classes"> Days Per Month(₹100/Day):</label>
+        <input type="number" id="classes" name="classes" min="0" max="31" required>
+       
+        <label for="personal">Personal Trainer (₹1000/month extra):</label> 
+         <input type="checkbox" id="personal" name="personal"><br>
+        
+        <button type="button" onclick="calculateMembership()">Calculate</button>
+      </form>
+      <div id="membershipResult"></div>
+    </section>
+
+    
+    <section id="dashboard">
+      <h2> Dashboard</h2>
+      <div id="stats">
+    
+        <div>Current Members: 120</div>
+        <div>
+          <h3>GYM INTERIOR</h3>
+          <img src="./assest/gym.webp" alt="gym-image" height="200px" width="200px">
+           <img src="./assest/gym 2.jpg" alt="gym-image" height="200px" width="200px">
+            <img src="./assest/gym 3.jpg" alt="gym-image" height="200px" width="200px">
+            <img src="./assest/gym 4.webp" alt="gym-image" height="200px" width="200px">
+                
+
+          
+        </div>
+
+        
+
+      </div>
+    </section>
+
+    <footer>
+  <div class="footer-container">
+    <div class="footer-about">
+      <h3>Fitness Studio</h3>
+      <p>Your health, our priority. Join us to stay fit and strong with professional trainers and tailored programs.</p>
+    </div>
+
+    
+
+    <div class="footer-contact">
+      <h4>Contact Us</h4>
+      <p>Email: fitgym456.com</p>
+      <p>Phone: +91 98765 43210</p>
+      <p>Location: Chennai, India</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 Fitness Studio | All Rights Reserved</p>
+  </div>
+</footer>
+
+  </main>
+  <script src="index.js"></script>
+</body>
+</html>
